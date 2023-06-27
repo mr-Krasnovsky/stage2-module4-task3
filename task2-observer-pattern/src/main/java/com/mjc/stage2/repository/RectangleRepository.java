@@ -14,7 +14,7 @@ public class RectangleRepository {
         rectangles = new ArrayList<>();
     }
 
-    public static RectangleRepository getInstance() {
+        public static RectangleRepository getInstance() {
         if (instance == null) {
             instance = new RectangleRepository();
         }
