@@ -14,8 +14,9 @@ public class RectangleObserver  implements Observer {
         int id = rectangle.getId();
         double sideA = rectangle.getSideA();
         double sideB = rectangle.getSideB();
-        
-        RectangleValues values =new RectangleValues(sideA * sideB, 2d * sideA + 2d * sideB);
-        RectangleWarehouse.getInstance().put(id, values);
+
+        RectangleWarehouse rectangleWarehouse = RectangleWarehouse.getInstance();
+        RectangleValues values = new RectangleValues(sideA * sideB, 2 * (sideA + sideB));
+        rectangleWarehouse.put(id, values);
     }
 }
